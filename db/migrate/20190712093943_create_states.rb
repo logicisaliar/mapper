@@ -2,7 +2,7 @@ class CreateStates < ActiveRecord::Migration[5.2]
   def change
     create_table :states do |t|
       t.string :name
-      t.flloat :field_1
+      t.float :field_1
       t.float :field_2
       t.float :field_3
       t.float :field_4
