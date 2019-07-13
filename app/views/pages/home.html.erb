@@ -1,2 +1,8 @@
 <h1>What would you like to plot?</h1>
-<%= link_to "Products", class: "btn-home" %>
+<% State.all.each do |s| %>
+<% if s.field_7 == 1 %>
+<%= s.name %>
+<p></p>
+<% else %>
+<% end %>
+<% end %>
