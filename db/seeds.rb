@@ -25,7 +25,9 @@ i += 1
 puts "Creating Cities - #{i}"
 csv_text = File.read(Rails.root.join('lib', 'seeds', "city.csv"))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+s = 0
 csv.each do |row|
+
   t = City.new
   t.name = row['name']
   t.state_id = row['state_id']
@@ -38,6 +40,11 @@ csv.each do |row|
   t.field_7 = row['field_7']
   t.field_8 = row['field_8']
   t.field_9 = row['field_9']
-  t.save!
+  if t.field_7 == 1
+    t.save!
+  end
+
+  puts "#{t.name} created #{City.all.length} attempt #{s}"
+  s+=1
 end
 puts "Cities created"
