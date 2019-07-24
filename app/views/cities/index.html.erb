@@ -1,2 +1,8 @@
-<h1>Cities#index</h1>
-<p>Find me in app/views/cities/index.html.erb</p>
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['pk.eyJ1IjoibG9naWNpc2FsaWFyIiwiYSI6ImNqeWg1NXVuZDA1OTYzY3BsaXJ4anEwY3IifQ.yM3CC8YIBN6HhVf4Bpi_kg'] %>"
+>
+</div>
