@@ -43,7 +43,6 @@ csv.each do |row|
   if t.field_7 == 1
     t.save!
   end
-
   puts "#{t.name} created #{City.all.length} attempt #{s}"
   s+=1
 end
